@@ -1,3 +1,5 @@
+// Repositorio: https://github.com/carranzarodrigo378-ops/bmi-calculator
+
 #include <stdio.h>
 
 int main() {
@@ -5,8 +7,19 @@ int main() {
 
     printf("Ingrese el peso en kg: ");
     scanf("%f", &peso);
+    while (peso < 0) {
+        printf("Error: el peso no puede ser un numero negativo.\n");
+        printf("Ingrese nuevamente el peso en kg: ");
+        scanf("%f", &peso);
+    }
+
     printf("Ingrese la altura en metros: ");
     scanf("%f", &altura);
+    while (altura < 0) {
+        printf("Error: la altura no puede ser un numero negativo.\n");
+        printf("Ingrese nuevamente la altura en metros: ");
+        scanf("%f", &altura);
+    }
 
     imc = peso / (altura * altura);
 
